@@ -2,6 +2,7 @@ from calc_func import add, subtract, divide
 
 from calc_multiply import multiply 
 
+from calc_areaofrectangle import area_of_rectangle
   
 
   
@@ -18,11 +19,14 @@ def main():
 
     4. Divide
 
+    5. Area of Rectangle
+
+
   
 
     """) 
 
-    choice = input("Enter your choice (1/2/3/4): ") 
+    choice = input("Enter your choice (1/2/3/4/5): ") 
 
   
 
@@ -50,6 +54,7 @@ def main():
 
         print(f"The result is: {multiply(a, b)}") 
 
+
     elif choice == "4": 
 
         a = float(input("Enter the first number: ")) 
@@ -61,8 +66,16 @@ def main():
         except ValueError as e:
             print(f"Error: {e}")
 
-    else: 
 
+    elif choice == "5":
+        a = float(input("Enter the length: ")) 
+
+
+        b = float(input("Enter the breadth: ")) 
+
+        print(f"The result is: {area_of_rectangle(a, b)}") 
+
+    else: 
         print("Invalid choice.") 
 
   
